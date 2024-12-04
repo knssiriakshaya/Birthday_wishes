@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .title {
+      font-size: 3rem;
+      color: #579100;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .message {
+      font-size: 1.5rem;
+      color: #c4fa02;
+      margin: 20px 0;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff3d33;
+    }
+
+    .emojis {
+      position: relative;
+      height: 200px;
+      margin-top: 50px;
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 2rem;
+      animation: float 5s infinite ease-in-out;
+    }
+
+    .emoji1 {
+      left: 20%;
+      animation-delay: 0s;
+    }
+
+    .emoji2 {
+      left: 50%;
+      animation-delay: 2s;
+    }
+
+    .emoji3 {
+      left: 80%;
+      animation-delay: 0s;
+    }
+
+    /* Balloon background */
+    .balloon {
+      position: absolute;
+      font-size: 2rem;
+      animation: floatBalloon 10s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    .balloon1 {
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .balloon2 {
+      left: 30%;
+      animation-delay: 1s;
+    }
+
+    .balloon3 {
+      left: 50%;
+      animation-delay: 2s;
+    }
+
+    .balloon4 {
+      left: 70%;
+      animation-delay: 1s;
+    }
+
+    .balloon5 {
+      left: 90%;
+      animation-delay: 0s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-100px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatBalloon {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-200px) rotate(180deg);
+      }
+      100% {
+        transform: translateY(0) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">🎉 Happy Birthday! 🎉</h1>
+    <h1 class="title">🤩NEHA🤩</h1>
+    <p class="message">Wishing you a day filled with love, joy, and laughter. Have a fantastic celebration! 🎂🎈</p>
+    <button class="btn" onclick="goToNextPage()">Celebrate!</button><br><br><br><br>
+    <div class="emojis">
+      <div class="emoji emoji1">🥳</div>
+      <div class="emoji emoji2">🥳</div>
+      <div class="emoji emoji3">🥳</div>
+    </div>
+  </div>
+
+  <!-- Floating Balloons -->
+  <div class="balloon balloon1">🍬</div>
+  <div class="balloon balloon2">🍫</div>
+  <div class="balloon balloon3">🍭</div>
+  <div class="balloon balloon4">🍫</div>
+  <div class="balloon balloon5">🍬</div>
+
+  <script>
+    function goToNextPage() {
+      window.location.href = "birthday_next.html";
+    }
+  </script>
+</body>
+</html>
